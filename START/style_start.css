@@ -40,7 +40,6 @@ button:hover {
     position: fixed;
     left: 0; bottom: 0;
     padding: 0.3%; 
-    background: #707070; 
-    color: #fff; 
+    color: #707070; 
     width: 100%; 
 }
