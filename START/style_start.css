@@ -1,0 +1,46 @@
+body {
+    background: url(images/back.png) no-repeat fixed;
+    background-size: cover;
+}
+
+h1 {
+    font-family: 'Tw Cen MT', Tw Cen;
+    font-size: 450%;
+    text-align: center;
+    color: #1D83D4;
+    -webkit-text-stroke: 1px #707070;
+    margin: 0;
+}
+
+.image {
+    margin: auto;
+    width: 18%;
+    display: block;
+    margin-top: 2%
+}
+
+button {
+    width: 13%;
+    font-family: 'Tw Cen MT', Tw Cen;
+    font-size: 300%;
+    text-align: center;
+    color: #1D83D4;
+    -webkit-text-stroke: 1px #707070;
+    background-color: #B0EFFF;
+    border-radius: 36px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-top: 2%;
+}
+button:hover {
+    background-color: #5ED2F0;
+}
+#footer {
+    position: fixed;
+    left: 0; bottom: 0;
+    padding: 0.3%; 
+    background: #707070; 
+    color: #fff; 
+    width: 100%; 
+}
