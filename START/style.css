@@ -12,11 +12,21 @@ h1 {
     margin: 0;
 }
 
+h2 {
+    font-family: 'Tw Cen MT', Tw Cen;
+    font-size: 200%;
+    text-align: center;
+    color: #1D83D4;
+    -webkit-text-stroke: 1px #707070;
+    margin: 0;
+    margin-top: 1.5%;
+}
+
 .image {
     margin: auto;
-    width: 18%;
+    width: 14%;
     display: block;
-    margin-top: 2%
+    margin-top: 1%
 }
 
 button {
@@ -33,13 +43,14 @@ button {
     transform: translate(-50%, 0);
     margin-top: 2%;
 }
+
 button:hover {
     background-color: #5ED2F0;
 }
+
 #footer {
-    position: fixed;
-    left: 0; bottom: 0;
-    padding: 0.3%; 
-    color: #707070; 
-    width: 100%; 
+    left: 0;
+    bottom: 0;
+    color: #707070;
+    width: 100%;
 }
