@@ -9,32 +9,38 @@
     <script src="script.js"></script>
 </head>
 
-<body onLoad="z1();">
+<body onLoad="z1();" id='body'>
     <div class="modal" id="modal">
-        <button id="close">X</button>
-        <h3 id="result"></h3>
+        <div id='del'>
+            <button style='background-color: #B0EFFF; position: absolute; right: 10px; top: 5px;' id="close">X</button>
+            <h3 style='z-index: 99999; text-align: center; margin: auto; position: fixed;' id="result"></h3>
+        </div>
     </div>
 
     <!--Body-->
-    <div class="main">
-       <img src="images/%D0%BA%D1%80%D0%B5%D1%81%D1%82.png" alt='...' style='margin-left: 1%;'>
-       <img src="images/%D0%BA%D1%80%D1%83%D0%B3.png" alt='...' style='margin: 0; margin-left: 6.5%; width: 7.5%;'>
-        <div class="score">
-            <div class="firstPlayer" id="firstPlayer" style='display: inline-block; width: 200px;'>
-                <h5 class="txt3" style="width: 150px; font-weight: 200; text-align: center; font-size: 20px; color: #1D83D4; font-family: 'Tw Cen MT', Tw Cen; ">First player : 0</h5>
-            </div>
-            <div class="secondPlayer" id="secondPlayer" style='display: inline-block; width: 200px;'>
-                <h5 class="txt3" style="width: 180px; font-weight: 200; text-align: center; font-size: 20px; color: #1D83D4; font-family: 'Tw Cen MT', Tw Cen; ">Second player : 0</h5>
+    <div class="main" id='main'>
+        <div class="score" style='text-align: center;'>
+            <div style='display: inline-block; margin-left: 4.5%;'>
+               <img src="images/%D0%BA%D1%80%D0%B5%D1%81%D1%82.png" alt='...'>
+                <div class="firstPlayer" id="firstPlayer" style='display: inline-block; width: 200px;'>
+                    
+                    <h5 class="txt3" style="width: 100px; font-weight: 200; text-align: center; font-size: 20px; color: #1D83D4; font-family: 'Tw Cen MT', Tw Cen; margin: 0; padding: 0;">First player : <br> 0</h5>
+                </div>
+                <img src="images/%D0%BA%D1%80%D1%83%D0%B3.png" alt='...'>
+                <div class="secondPlayer" id="secondPlayer" style='display: inline-block; width: 200px;'>
+                    <h5 class="txt3" style="width: 130px; font-weight: 200; text-align: center; font-size: 20px; color: #1D83D4; font-family: 'Tw Cen MT', Tw Cen; margin: 0; padding: 0;">Second player : <br> 0</h5>
+                </div>
             </div>
         </div>
-        <h1 id='whoturn' class="txt3" style="font-weight: 200; margin: 0; margin-bottom: 2%; color: #1D83D4; text-align: center; font-family: 'Tw Cen MT', Tw Cen; ">Your turn - X</h1>
 
-        <center><canvas id="canvas" width="400px" height="400px"></canvas></center>
+        <h1 id='whoturn' class="txt3" style="font-weight: 200; margin: 0; margin-bottom: 1.5%; margin-top:3%; color: #1D83D4; text-align: center; font-family: 'Tw Cen MT', Tw Cen; ">Your turn - X</h1>
+
+        <center><canvas style='margin-bottom: 3%;' id="canvas" width="400px" height="400px"></canvas></center>
 
         <div class="btns">
             <div style='margin: auto;'>
-                <button id="button2" style='margin: 0; margin-top: 2%;' onClick="z1()">New game</button>
-                <button id="button1" style='margin: 0; margin-bottom: 2%;'>Reset</button>
+                <button id="button2" style='margin: 0; margin-top: 0.5%;' onClick="z1()">New game</button>
+                <button id="button1" style='margin: 0; margin-top: 0.2%; margin-bottom: 1%;'>Reset</button>
             </div>
         </div>
     </div>

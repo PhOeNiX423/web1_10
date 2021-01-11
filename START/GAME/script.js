@@ -2,7 +2,6 @@ function z1() {
     let canvas = document.getElementById('canvas');
     let ctx = canvas.getContext('2d');
 
-    //Разметка игрового поля
     function draw_line() {
         ctx.beginPath();
         ctx.fillStyle = '#607D8B';
@@ -140,6 +139,16 @@ function z1() {
                 currentPlayer += 1;
             } else {
                 document.getElementById("modal").style.opacity = "1";
+                h1result.innerHTML = ('This place taken!');
+                h1result.style.fontFamily = "'Tw Cen MT', Tw Cen";
+                h1result.style.fontSize = "60px";
+                h1result.style.color = "#106AB1";
+                h1result.style.textAlign = "center";
+                h1result.style.zIndex = '100';
+                h1result.style.display = 'flex';
+                h1result.style.left = '37%';
+                h1result.style.right = '12%';
+                h1result.style.top = '5.5%';
             }
             winIndex = [
 	    [field[0][0], field[0][1], field[0][2]],
@@ -227,6 +236,8 @@ function z1() {
         document.getElementById("modal").style.opacity = "0";
     }
 
+    document.getElementById("modal").style.opacity = "0";
+
     function firstPlayerWinsFunc() {
         winner = 'first';
         count = 0;
@@ -237,26 +248,41 @@ function z1() {
         firstPlayerWins.style.textAlign = "center";
         whoturn.textContent = `Your turn - ${playerFirstName}`;
         document.getElementById("modal").style.opacity = "1";
-        h1result.innerHTML = ('First player - X - is winner!');
-        document.getElementById("canvas").style.opacity = "0.5";
+        h1result.innerHTML = ('First player - X - is winner! <br> Нажмите Reset, чтобы продолжить игру <br> Нажмите New game, чтобы начать новую');
+        h1result.style.fontFamily = "'Tw Cen MT', Tw Cen";
+        h1result.style.fontSize = "40px";
+        h1result.style.color = "#106AB1";
+        h1result.style.textAlign = "center";
+        h1result.style.left = '13%';
+        h1result.style.right = '12%';
+        document.getElementById("canvas").style.opacity = "0.4";
     }
+
+
 
     function secondPlayerWinsFunc() {
         winner = 'second';
         count = 0;
         secondPlayerWins.textContent = `Second player : ${playerSecond}`;
-        firstPlayerWins.style.fontFamily = "'Tw Cen MT', Tw Cen";
-        firstPlayerWins.style.fontSize = "20px";
-        firstPlayerWins.style.color = "#1D83D4";
-        firstPlayerWins.style.textAlign = "center";
+        secondPlayerWins.style.fontFamily = "'Tw Cen MT', Tw Cen";
+        secondPlayerWins.style.fontSize = "20px";
+        secondPlayerWins.style.color = "#1D83D4";
+        secondPlayerWins.style.textAlign = "center";
+        whoturn.textContent = `Your turn - ${playerFirstName}`;
         document.getElementById("modal").style.opacity = "1";
-        h1result.innerHTML = ('Second player - O - is winner!');
-        document.getElementById("canvas").style.opacity = "0.5";
+        h1result.style.fontFamily = "'Tw Cen MT', Tw Cen";
+        h1result.style.fontSize = "60px";
+        h1result.style.color = "#106AB1";
+        h1result.style.textAlign = "center";
+        h1result.style.left = '13%';
+        h1result.style.right = '12%';
+        h1result.innerHTML = ('Second player - O - is winner! <br> Нажмите Reset, чтобы продолжить игру');
+        document.getElementById("canvas").style.opacity = "0.4";
     }
 
     buttonNewRound.addEventListener('click', () => {
         document.getElementById("canvas").style.opacity = "1";
-        ctx.clearRect(0, 0, 390, 390);
+        ctx.clearRect(0, 0, 400, 400);
         draw_line();
         field = [
 	        ['', '', ''],
@@ -270,7 +296,7 @@ function z1() {
 
     buttonReset.addEventListener('click', () => {
         document.getElementById("canvas").style.opacity = "1";
-        ctx.clearRect(0, 0, 390, 390);
+        ctx.clearRect(0, 0, 400, 400);
         draw_line();
         field = [
 		    ['', '', ''],
